@@ -63,6 +63,8 @@ jobs:
         with:
           sdk: latest-fastcomp
       - uses: actions/checkout@v1
+        with:
+          submodules: true
       - run: make -j2 PLATFORM=simulator TARGET=web
       - uses: actions/upload-artifact@master
         with:
